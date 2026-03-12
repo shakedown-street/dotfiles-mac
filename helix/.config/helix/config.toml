@@ -1,7 +1,6 @@
 theme = "catppuccin_macchiato"
 
 [editor]
-bufferline = "always"
 color-modes = true
 cursorline = true
 line-number = "relative"
@@ -25,10 +24,3 @@ center = ["version-control"]
 mode.insert = "INSERT"
 mode.normal = "NORMAL"
 mode.select = "SELECT"
-
-[keys.normal.space]
-q = ":buffer-close"
-
-[keys.normal.g]
-N = "jump_forward"
-P = "jump_backward"
