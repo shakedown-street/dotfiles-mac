@@ -1,0 +1,5 @@
+theme = Catppuccin Macchiato
+font-family = MesloLGM Nerd Font Mono
+font-thicken = true
+window-padding-x = 4
+window-padding-y = 4
