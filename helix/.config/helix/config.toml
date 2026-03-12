@@ -25,3 +25,7 @@ center = ["version-control"]
 mode.insert = "INSERT"
 mode.normal = "NORMAL"
 mode.select = "SELECT"
+
+[keys.normal.g]
+N = "jump_forward"
+P = "jump_backward"
