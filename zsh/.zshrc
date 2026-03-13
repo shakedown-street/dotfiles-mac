@@ -3,7 +3,7 @@
 autoload -Uz compinit
 compinit -C
 
-zstyle ':completion:*' menu selectk
+zstyle ':completion:*' menu select
 
 # zoxide
 # NOTE: zoxide must be placed after compinit which is why it's here instead of zprofile
