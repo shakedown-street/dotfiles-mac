@@ -1,0 +1,32 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+        children
+        pane size=1 borderless=true {
+            plugin location="status-bar"
+        }
+    }
+    tab name="Editor" {
+        pane split_direction="vertical" {
+            pane {
+                pane name="hx" command="hx" {
+                    args "."
+                }
+                pane name="zsh" size="30%"
+            }
+            pane size="30%" stacked=true {
+                pane name="lazygit" command="lazygit" expanded=true
+                pane name="yazi" command="yazi"
+            }
+        }
+    }
+    tab name="Terminal" {
+        pane stacked=true {
+            pane name="zsh"
+            pane name="zsh"
+            pane name="zsh"
+        }
+    }
+}

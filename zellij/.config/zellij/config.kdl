@@ -226,6 +226,13 @@ keybinds clear-defaults=true {
     }
 }
 
+ui {
+    pane_frames {
+        hide_session_name true
+        rounded_corners true
+    }
+}
+
 // Plugin aliases - can be used to change the implementation of Zellij
 // changing these requires a restart to take effect
 plugins {
