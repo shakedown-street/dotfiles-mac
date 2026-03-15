@@ -16,11 +16,13 @@ layout {
                 }
                 pane name="zsh" size="30%"
             }
-            pane size="30%" stacked=true {
-                pane name="lazygit" command="lazygit" expanded=true
-                pane name="yazi" command="yazi"
-            }
         }
+    }
+    tab name="Git" {
+        pane name="lazygit" command="lazygit"
+    }
+    tab name="Files" {
+        pane name="yazi" command="yazi"
     }
     tab name="Terminal" {
         pane stacked=true {
