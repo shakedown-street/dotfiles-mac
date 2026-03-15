@@ -26,6 +26,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
 
+# this is just here so that lazygit finds the config file in ~/.config
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # completion
 autoload -Uz compinit
 compinit -C
