@@ -3,6 +3,9 @@ git:
     - pager: delta --dark --paging=never --line-numbers
     - pager: delta --dark --paging=never --line-numbers --side-by-side
 
+os:
+  editAtLine: 'hx {{filename}}:{{line}}'
+
 theme:
   activeBorderColor:
     - '#8aadf4'
