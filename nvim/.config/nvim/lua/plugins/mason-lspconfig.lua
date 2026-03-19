@@ -1,13 +1,9 @@
-return   {
+return {
     "williamboman/mason-lspconfig.nvim",
-    dependencies = { "mason.nvim" },
+    dependencies = {"mason.nvim"},
     config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls",
-          "pyright",
-          "tsserver",
-        },
-      })
-    end,
-  }
+        require("mason-lspconfig").setup({
+            ensure_installed = {"lua_ls", "pyright", "tsserver"}
+        })
+    end
+}
