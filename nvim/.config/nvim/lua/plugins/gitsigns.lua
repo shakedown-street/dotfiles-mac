@@ -29,42 +29,42 @@ return {
         end)
 
         -- Actions
-        map("n", "<leader>hs", gitsigns.stage_hunk, { desc = "Gitsigns stage hunk" })
-        map("n", "<leader>hr", gitsigns.reset_hunk, { desc = "Gitsigns reset hunk" })
-        map("n", "<leader>hp", gitsigns.preview_hunk, { desc = "Gitsigns preview hunk" })
-        map("n", "<leader>hi", gitsigns.preview_hunk_inline, { desc = "Gitsigns preview hunk inline" })
+        map("n", "<leader>gs", gitsigns.stage_hunk, { desc = "stage_hunk" })
+        map("n", "<leader>gr", gitsigns.reset_hunk, { desc = "reset_hunk" })
+        map("n", "<leader>gp", gitsigns.preview_hunk, { desc = "preview_hunk" })
+        map("n", "<leader>gi", gitsigns.preview_hunk_inline, { desc = "preview_hunk_inline" })
 
-        map("v", "<leader>hs", function()
+        map("v", "<leader>gs", function()
           gitsigns.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
-        end, { desc = "Gitsigns stage hunk" })
-        map("v", "<leader>hr", function()
+        end, { desc = "stage_hunk" })
+        map("v", "<leader>gr", function()
           gitsigns.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
-        end, { desc = "Gitsigns reset hunk" })
+        end, { desc = "reset_hunk" })
 
-        map("n", "<leader>hS", gitsigns.stage_buffer, { desc = "Gitsigns stage buffer" })
-        map("n", "<leader>hR", gitsigns.reset_buffer, { desc = "Gitsigns reset buffer" })
+        map("n", "<leader>gS", gitsigns.stage_buffer, { desc = "stage_buffer" })
+        map("n", "<leader>gR", gitsigns.reset_buffer, { desc = "reset_buffer" })
 
-        map("n", "<leader>hb", function()
+        map("n", "<leader>gb", function()
           gitsigns.blame_line({ full = true })
-        end, { desc = "Gitsigns blame line" })
-        map("n", "<leader>hB", gitsigns.blame, { desc = "Gitsigns blame" })
+        end, { desc = "blame line" })
+        map("n", "<leader>gB", gitsigns.blame, { desc = "blame" })
 
-        map("n", "<leader>hd", gitsigns.diffthis, { desc = "Gitsigns diffthis" })
-        map("n", "<leader>hD", function()
+        map("n", "<leader>gd", gitsigns.diffthis, { desc = "diffthis" })
+        map("n", "<leader>gD", function()
           gitsigns.diffthis("~")
-        end, { desc = "Gitsigns diffthis~" })
+        end, { desc = "diffthis~" })
 
-        map("n", "<leader>hq", gitsigns.setqflist, { desc = "Gitsigns set qf list" })
-        map("n", "<leader>hQ", function()
+        map("n", "<leader>gq", gitsigns.setqflist, { desc = "setqflist" })
+        map("n", "<leader>gQ", function()
           gitsigns.setqflist("all")
-        end, { desc = "Gitsigns set qf list (all)" })
+        end, { desc = "setqflist (all)" })
 
         -- Toggles
-        map("n", "<leader>tb", gitsigns.toggle_current_line_blame, { desc = "Gitsigns toggle current line blame" })
-        map("n", "<leader>tw", gitsigns.toggle_word_diff, { desc = "Gitsigns toggle word diff" })
+        map("n", "<leader>tb", gitsigns.toggle_current_line_blame, { desc = "toggle_current_line_blame" })
+        map("n", "<leader>tw", gitsigns.toggle_word_diff, { desc = "toggle_word_diff" })
 
         -- Text object
-        map({ "o", "x" }, "ih", gitsigns.select_hunk, { desc = "Gitsigns select hunk" })
+        map({ "o", "x" }, "ih", gitsigns.select_hunk, { desc = "select_hunk" })
       end,
     })
   end,
