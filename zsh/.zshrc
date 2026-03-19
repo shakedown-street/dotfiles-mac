@@ -6,8 +6,8 @@ SAVEHIST=100000
 export PATH="$HOME/bin:$PATH"
 
 # editor
-export EDITOR="hx"
-export VISUAL="hx"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
