@@ -6,13 +6,27 @@ return {
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
   },
   config = function()
+    local telescope_config = require("telescope.config")
+
+    local vimgrep_arguments = { unpack(telescope_config.values.vimgrep_arguments) }
+
+    table.insert(vimgrep_arguments, "--hidden")
+    table.insert(vimgrep_arguments, "--glob")
+    table.insert(vimgrep_arguments, "!**/.git/*")
+
     require("telescope").setup({
       defaults = {
-        layout_strategy = "horizontal",
         layout_config = {
           prompt_position = "top",
         },
+        layout_strategy = "horizontal",
         sorting_strategy = "ascending",
+        vimgrep_arguments = vimgrep_arguments,
+      },
+      pickers = {
+        find_files = {
+          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+        },
       },
     })
 

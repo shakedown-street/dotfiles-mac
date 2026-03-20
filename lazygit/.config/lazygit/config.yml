@@ -3,6 +3,8 @@ git:
     - pager:
     - pager: delta --dark --paging=never --side-by-side
 
+# Uncomment if using helix
+
 # os:
 #   editAtLine: 'hx {{filename}}:{{line}}'
 
