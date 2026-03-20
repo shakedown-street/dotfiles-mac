@@ -10,9 +10,7 @@ layout {
     }
     tab name="Editor" {
         pane stacked=true {
-            pane name="nvim" expanded=true command="nvim" {
-                args "."
-            }
+            pane name="nvim" expanded=true command="nvim"
             pane name="zsh"
             pane name="zsh"
             pane name="zsh"
