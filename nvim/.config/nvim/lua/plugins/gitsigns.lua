@@ -60,8 +60,8 @@ return {
         end, { desc = "setqflist (all)" })
 
         -- Toggles
-        map("n", "<leader>tb", gitsigns.toggle_current_line_blame, { desc = "toggle_current_line_blame" })
-        map("n", "<leader>tw", gitsigns.toggle_word_diff, { desc = "toggle_word_diff" })
+        map("n", "<leader>htb", gitsigns.toggle_current_line_blame, { desc = "toggle_current_line_blame" })
+        map("n", "<leader>htw", gitsigns.toggle_word_diff, { desc = "toggle_word_diff" })
 
         -- Text object
         map({ "o", "x" }, "ih", gitsigns.select_hunk, { desc = "select_hunk" })
