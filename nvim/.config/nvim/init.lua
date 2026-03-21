@@ -4,13 +4,19 @@ vim.g.maplocalleader = " "
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+vim.opt.cursorline = true
+vim.opt.signcolumn = "yes:2"
+
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.opt.cursorline = true
-vim.opt.signcolumn = "yes"
+-- NOTE: Can be disabled if bufferline is removed
+vim.opt.termguicolors = true
 
--- tabs
+-- disable netrw completely
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- NOTE: Disabled in favor of guess-indent
 
 -- vim.opt.expandtab = true
@@ -20,15 +26,11 @@ vim.opt.signcolumn = "yes"
 -- vim.opt.smartindent = true
 -- vim.opt.autoindent = true
 
-vim.opt.termguicolors = true
-
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "diagnostic.open_float" })
-
--- disable netrw completely
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 require("config.lazy")
+
+vim.keymap.set({ "n", "v" }, "<leader>a", vim.lsp.buf.code_action, { desc = "lsp.buf.code_action" })
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { desc = "lsp.buf.rename" })
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "diagnostic.open_float" })
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
