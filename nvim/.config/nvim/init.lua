@@ -30,8 +30,6 @@ vim.g.loaded_netrwPlugin = 1
 
 require("config.lazy")
 
-vim.keymap.set({ "n", "v" }, "<leader>a", vim.lsp.buf.code_action, { desc = "lsp.buf.code_action" })
-vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { desc = "lsp.buf.rename" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "diagnostic.open_float" })
 
 vim.api.nvim_create_autocmd("VimEnter", {
