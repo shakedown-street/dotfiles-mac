@@ -41,6 +41,7 @@ return {
     vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "buffers" })
     vim.keymap.set("n", "<leader>j", builtin.jumplist, { desc = "jumplist" })
     vim.keymap.set("n", "<leader>'", builtin.resume, { desc = "resume" })
+    vim.keymap.set("n", "<leader>g", builtin.git_status, { desc = "git_status" })
 
     -- lsp pickers
     vim.keymap.set("n", "<leader>s", builtin.lsp_document_symbols, { desc = "lsp_document_symbols" })

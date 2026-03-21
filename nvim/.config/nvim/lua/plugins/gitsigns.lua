@@ -18,7 +18,7 @@ return {
           else
             gitsigns.nav_hunk("next")
           end
-        end)
+        end, { desc = "hunk" })
 
         map("n", "[c", function()
           if vim.wo.diff then
@@ -26,7 +26,7 @@ return {
           else
             gitsigns.nav_hunk("prev")
           end
-        end)
+        end, { desc = "hunk" })
 
         -- Actions
         map("n", "<leader>gs", gitsigns.stage_hunk, { desc = "stage_hunk" })
@@ -46,7 +46,7 @@ return {
 
         map("n", "<leader>gb", function()
           gitsigns.blame_line({ full = true })
-        end, { desc = "blame line" })
+        end, { desc = "blame_line" })
         map("n", "<leader>gB", gitsigns.blame, { desc = "blame" })
 
         map("n", "<leader>gd", gitsigns.diffthis, { desc = "diffthis" })
