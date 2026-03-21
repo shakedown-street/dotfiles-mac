@@ -1,15 +1,15 @@
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
-  -- keys = {
-  --   {
-  --     "<leader>?",
-  --     function()
-  --       require("which-key").show({ global = false })
-  --     end,
-  --     desc = "Buffer Local Keymaps (which-key)",
-  --   },
-  -- },
+  keys = {
+    {
+      "<leader>?",
+      function()
+        require("which-key").show({ global = false })
+      end,
+      desc = "Buffer Local Keymaps (which-key)",
+    },
+  },
   config = function()
     local wk = require("which-key")
 
@@ -19,8 +19,7 @@ return {
 
     wk.add({
       { "<leader>h", group = "Gitsigns" },
-      { "<leader>p", group = "Telescope" },
-      { "<leader>t", group = "Toggle" },
+      { "<leader>f", group = "Telescope" },
     })
   end,
 }
