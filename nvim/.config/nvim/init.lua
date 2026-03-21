@@ -7,6 +7,8 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.signcolumn = "yes:2"
 
+vim.opt.showmode = false
+
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
