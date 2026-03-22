@@ -63,7 +63,6 @@ alias man="batman"
 alias gs="git status"
 alias gcg="git config --edit --global"
 alias gcl="git config --edit --local"
-alias vim="nvim"
 alias ide="zellij --layout ~/.config/zellij/layouts/ide.kdl"
 
 # silly aliases
