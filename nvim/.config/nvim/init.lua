@@ -10,12 +10,10 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
+vim.opt.termguicolors = true
 
 -- NOTE: Status is shown by lualine
 vim.opt.showmode = false
-
--- NOTE: Can be disabled if bufferline is removed
-vim.opt.termguicolors = true
 
 -- NOTE: disable netrw completely
 vim.g.loaded_netrw = 1
