@@ -3,18 +3,16 @@ vim.g.maplocalleader = " "
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-
 vim.opt.cursorline = true
 vim.opt.signcolumn = "yes:2"
+vim.opt.scrolloff = 10
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 
 -- NOTE: Status is shown by lualine
 vim.opt.showmode = false
-
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
-vim.opt.autoindent = true
-vim.opt.smartindent = true
 
 -- NOTE: Can be disabled if bufferline is removed
 vim.opt.termguicolors = true
