@@ -66,7 +66,9 @@ return {
 
     -- override lsp references and definitions
     vim.keymap.set("n", "grr", builtin.lsp_references, { desc = "lsp_references" })
+    vim.keymap.set("n", "gri", builtin.lsp_implementations, { desc = "lsp_implementations" })
     vim.keymap.set("n", "grd", builtin.lsp_definitions, { desc = "lsp_definitions" })
+    vim.keymap.set("n", "grt", builtin.lsp_type_definitions, { desc = "lsp_type_definitions" })
 
     -- git pickers
     vim.keymap.set("n", "<leader>fg", builtin.git_status, { desc = "git_status" })
