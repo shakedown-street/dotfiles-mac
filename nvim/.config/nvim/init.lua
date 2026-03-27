@@ -46,3 +46,15 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end
   end,
 })
+
+-- Enable treesitter
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "<filetype>" },
+  callback = function(args)
+    -- enables syntax highlighting and other treesitter features
+    vim.treesitter.start()
+
+    -- enables experimental treesitter indentation
+    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+  end,
+})
