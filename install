@@ -1,137 +1,137 @@
 #!/usr/bin/env bash
 
 if [[ $# == 0 ]]; then
-  echo 'No arguments given; usage: install <packages>'
-  exit 1
+    echo 'No arguments given; usage: install <packages>'
+    exit 1
 fi
 
 if ! command -v brew >/dev/null 2>&1; then
-  echo 'brew not found, exiting'
-  exit 1
+    echo 'brew not found, exiting'
+    exit 1
 fi
 
 bat_install() {
-  echo 'Installing bat and bat-extras'
-  brew install bat bat-extras
+    echo 'Installing bat and bat-extras'
+    brew install bat bat-extras
 
-  echo "Creating bat symlinks in $HOME"
-  stow bat
+    echo "Creating bat symlinks in $HOME"
+    stow bat
 }
 
 ghostty_install() {
-  echo 'Installing ghostty'
-  brew install ghostty
+    echo 'Installing ghostty'
+    brew install ghostty
 
-  echo "Creating ghostty symlinks in $HOME"
-  stow ghostty
+    echo "Creating ghostty symlinks in $HOME"
+    stow ghostty
 }
 
 helix_install() {
-  echo 'Installing helix'
-  brew install helix
+    echo 'Installing helix'
+    brew install helix
 
-  echo 'Installing language servers'
+    echo 'Installing language servers'
 
-  echo 'Installing from brew...'
-  brew install golangci-lint golangci-lint-langserver gopls lua-language-server
+    echo 'Installing from brew...'
+    brew install golangci-lint golangci-lint-langserver gopls lua-language-server
 
-  if command -v npm >/dev/null 2>&1; then
-    echo 'Installing from npm...'
-    npm install -g bash-language-server pyright typescript-language-server vscode-langservers-extracted@4.8.0
-  else
-    echo 'npm not found, skipping npm language servers'
-  fi
+    if command -v npm >/dev/null 2>&1; then
+        echo 'Installing from npm...'
+        npm install -g bash-language-server pyright typescript-language-server vscode-langservers-extracted@4.8.0
+    else
+        echo 'npm not found, skipping npm language servers'
+    fi
 
-  if command -v pip >/dev/null 2>&1; then
-    echo 'Installing from pip...'
-    pip install black
-  else
-    echo 'pip not found, skipping pip language servers'
-  fi
+    if command -v pip >/dev/null 2>&1; then
+        echo 'Installing from pip...'
+        pip install black
+    else
+        echo 'pip not found, skipping pip language servers'
+    fi
 
-  echo "Creating helix symlinks in $HOME"
-  stow helix
+    echo "Creating helix symlinks in $HOME"
+    stow helix
 }
 
 lazygit_install() {
-  echo 'Installing lazygit'
-  brew install lazygit
+    echo 'Installing lazygit'
+    brew install lazygit
 
-  echo "Creating lazygit symlinks in $HOME"
-  stow lazygit
+    echo "Creating lazygit symlinks in $HOME"
+    stow lazygit
 }
 
 nvim_install() {
-  echo 'Installing nvim'
-  brew install nvim
+    echo 'Installing nvim'
+    brew install nvim
 
-  echo "Creating nvim symlinks in $HOME"
-  stow nvim
+    echo "Creating nvim symlinks in $HOME"
+    stow nvim
 }
 
 vim_install() {
-  echo "Creating vim symlinks in $HOME"
-  stow vim
+    echo "Creating vim symlinks in $HOME"
+    stow vim
 }
 
 yazi_install() {
-  echo 'Installing yazi'
-  brew install yazi
+    echo 'Installing yazi'
+    brew install yazi
 
-  echo "Creating yazi symlinks in $HOME"
-  stow yazi
+    echo "Creating yazi symlinks in $HOME"
+    stow yazi
 }
 
 zellij_install() {
-  echo 'Installing zellij'
-  brew install zellij
+    echo 'Installing zellij'
+    brew install zellij
 
-  echo "Creating zellij symlinks in $HOME"
-  stow zellij
+    echo "Creating zellij symlinks in $HOME"
+    stow zellij
 }
 
 zsh_install() {
-  echo "Creating zsh symlinks in $HOME"
-  stow zsh
+    echo "Creating zsh symlinks in $HOME"
+    stow zsh
 }
 
 handle_package() {
-  local package=$1
+    local package=$1
 
-  case "$package" in
-    bat)
-      bat_install
-      ;;
-    ghostty)
-      ghostty_install
-      ;;
-    helix)
-      helix_install
-      ;;
-    lazygit)
-      lazygit_install
-      ;;
-    nvim)
-      nvim_install
-      ;;
-    vim)
-      vim_install
-      ;;
-    yazi)
-      yazi_install
-      ;;
-    zellij)
-      zellij_install
-      ;;
-    zsh)
-      zsh_install
-      ;;
-  esac
+    case "$package" in
+        bat)
+            bat_install
+            ;;
+        ghostty)
+            ghostty_install
+            ;;
+        helix)
+            helix_install
+            ;;
+        lazygit)
+            lazygit_install
+            ;;
+        nvim)
+            nvim_install
+            ;;
+        vim)
+            vim_install
+            ;;
+        yazi)
+            yazi_install
+            ;;
+        zellij)
+            zellij_install
+            ;;
+        zsh)
+            zsh_install
+            ;;
+    esac
 }
 
 echo 'Installing basic tools'
 brew install fd fzf ripgrep stow zoxide
 
 for package in "$@"; do
-  handle_package $package
+    handle_package $package
 done
