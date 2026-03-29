@@ -1,15 +1,9 @@
 theme = "catppuccin_macchiato"
 
 [editor]
-bufferline = "always"
+bufferline = "multiple"
 color-modes = true
 cursorline = true
-line-number = "relative"
-
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
 
 [editor.file-picker]
 hidden = false
@@ -17,11 +11,22 @@ hidden = false
 [editor.indent-guides]
 render = true
 
-[editor.soft-wrap]
-enable = true
-
 [editor.statusline]
-center = ["version-control"]
-mode.insert = "INSERT"
-mode.normal = "NORMAL"
-mode.select = "SELECT"
+left = [
+  "mode",
+  "spinner",
+  "file-name",
+  "version-control", # Added
+  "read-only-indicator",
+  "file-modification-indicator"
+]
+right = [
+  "diagnostics",
+  "file-indent-style", # Added
+  "file-type", # Added
+  "selections",
+  "register",
+  "position",
+  "total-line-numbers", # Added
+  "file-encoding"
+]
