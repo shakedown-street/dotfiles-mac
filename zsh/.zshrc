@@ -45,7 +45,7 @@ autoload -Uz vcs_info
 setopt PROMPT_SUBST
 
 precmd() {
-  vcs_info
+    vcs_info
 }
 
 zstyle ":vcs_info:git:*" formats " (%b)"
@@ -73,9 +73,9 @@ alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # a useful search function that pipes rg output to fzf and opens selection in helix at exact line
 seer() {
-  rg --line-number --no-heading --color=always "$@" \
-  | fzf --ansi --delimiter ':' \
-    --height "100%" --layout reverse --border \
-    --preview 'bat --style=numbers --color=always {1} --highlight-line {2}' \
-    --bind 'enter:execute(hx {1}:{2})'
+    rg --line-number --no-heading --color=always "$@" \
+    | fzf --ansi --delimiter ':' \
+        --height "100%" --layout reverse --border \
+        --preview 'bat --style=numbers --color=always {1} --highlight-line {2}' \
+        --bind 'enter:execute(hx {1}:{2})'
 }
