@@ -1,7 +1,6 @@
 set number
-set relativenumber
 set cursorline
-set scrolloff=10
+set scrolloff=5
 set ignorecase
 set smartcase
 set autoindent
