@@ -30,3 +30,6 @@ right = [
   "total-line-numbers", # Added
   "file-encoding"
 ]
+
+[keys.normal.g]
+x = ":bc"
