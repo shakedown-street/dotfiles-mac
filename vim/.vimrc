@@ -3,6 +3,7 @@ set cursorline
 set scrolloff=5
 set ignorecase
 set smartcase
+set incsearch
 set autoindent
 set smartindent
 set expandtab
