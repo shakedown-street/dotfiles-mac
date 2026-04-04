@@ -31,5 +31,5 @@ right = [
   "file-encoding"
 ]
 
-[keys.normal.g]
+[keys.normal.space]
 x = ":bc"
