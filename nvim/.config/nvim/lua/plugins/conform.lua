@@ -3,10 +3,12 @@ return {
   config = function()
     require("conform").setup({
       formatters_by_ft = {
+        css = { "prettier" },
         javascript = { "prettier" },
         javascriptreact = { "prettier" },
         lua = { "stylua" },
         python = { "black" },
+        scss = { "prettier" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
       },
