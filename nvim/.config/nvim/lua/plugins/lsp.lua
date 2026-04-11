@@ -23,4 +23,15 @@ return {
       },
     },
   },
+  config = function()
+    vim.lsp.config("pyright", {
+      settings = {
+        python = {
+          analysis = {
+            typeCheckingMode = "off",
+          },
+        },
+      },
+    })
+  end,
 }
