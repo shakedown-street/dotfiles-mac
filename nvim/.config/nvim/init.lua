@@ -24,7 +24,28 @@ vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "diagnostic
 
 -- init treesitter
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "prisma", "typescript", "typescriptreact" },
+  pattern = {
+    "bash",
+    "css",
+    "dockerfile",
+    "go",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "kdl",
+    "lua",
+    "markdown",
+    "prisma",
+    "python",
+    "scss",
+    "sh",
+    "toml",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "zsh",
+  },
   callback = function()
     vim.treesitter.start()
   end,
