@@ -1,5 +1,8 @@
 return {
   "saghen/blink.cmp",
   version = "1.*",
-  opts = {},
+  opts = {
+    -- Experimental signature help support
+    signature = { enabled = true },
+  },
 }
