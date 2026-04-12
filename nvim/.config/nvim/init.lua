@@ -20,6 +20,7 @@ vim.opt.tabstop = 4
 
 require("config.lazy")
 
+-- diagnostics
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "diagnostic.open_float" })
 
 -- init treesitter
