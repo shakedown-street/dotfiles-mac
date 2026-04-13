@@ -22,6 +22,11 @@ require("config.lazy")
 
 -- diagnostics
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "diagnostic.open_float" })
+vim.diagnostic.config({
+  signs = {
+    priority = 5,
+  },
+})
 
 -- init treesitter
 vim.api.nvim_create_autocmd("FileType", {
