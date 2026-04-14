@@ -28,7 +28,7 @@ ghostty_install() {
 
 helix_install() {
     echo 'Installing helix'
-    brew install helix
+    brew install evil-helix 
 
     echo 'Installing language servers'
 
@@ -99,33 +99,16 @@ handle_package() {
     local package=$1
 
     case "$package" in
-        bat)
-            bat_install
-            ;;
-        ghostty)
-            ghostty_install
-            ;;
-        helix)
-            helix_install
-            ;;
-        lazygit)
-            lazygit_install
-            ;;
-        nvim)
-            nvim_install
-            ;;
-        vim)
-            vim_install
-            ;;
-        yazi)
-            yazi_install
-            ;;
-        zellij)
-            zellij_install
-            ;;
-        zsh)
-            zsh_install
-            ;;
+        bat) bat_install ;;
+        ghostty) ghostty_install ;;
+        helix) helix_install ;;
+        lazygit) lazygit_install ;;
+        nvim) nvim_install ;;
+        vim) vim_install ;;
+        yazi) yazi_install ;;
+        zellij) zellij_install ;;
+        zsh) zsh_install ;;
+        *) echo "Unknown package: $package" ;;
     esac
 }
 
