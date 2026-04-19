@@ -69,3 +69,7 @@ vim.keymap.set("n", "<Esc>", function()
   end
   return "<Esc>"
 end, { expr = true })
+
+vim.keymap.set("n", "<leader>q", function()
+  vim.cmd("bd")
+end, { desc = "bdelete" })
